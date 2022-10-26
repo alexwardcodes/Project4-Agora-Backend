@@ -1,36 +1,43 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const sellerSchema = mongoose.Schema({
-
+const sellerSchema = mongoose.Schema(
+  {
     sellerName: {
-        type: String,
-        minlength: [3],
-        maxlength: [99],
-        required: true
+      type: String,
+      minlength: [3],
+      maxlength: [99],
+      required: true,
     },
     bio: {
-        type: String,
-        minlength: [3],
-        maxlength: [500], 
-        required: true       
+      type: String,
+      minlength: [3],
+      maxlength: [500],
+      required: true,
     },
-    user: [{
+    user: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    }],   
-    product: [{
+        ref: "User",
+      },
+    ],
+    product: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product'
-    }],   
-    review: [{
+        ref: "Product",
+      },
+    ],
+    review: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Review'
-    }],   
-},
-{
-    timestamps: true   
-});
+        ref: "Review",
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
 
-const Seller = mongoose.model('Seller', sellerSchema);
+const Seller = mongoose.model("Seller", sellerSchema);
 
-module.exports = {Seller};
+module.exports = { Seller };

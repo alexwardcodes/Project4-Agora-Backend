@@ -11,7 +11,7 @@ exports.user_dashboard_get = async (req, res) => {
     "favourite",
     "review"
   ); // NEEDS TO BE UPDATED WHEN SIGNIN IS WORKING ON FE
-  console.log(user);
+
   let seller = "";
   seller = await Seller.find({ user: { $in: [user._id] } })
     .populate("product", "review")

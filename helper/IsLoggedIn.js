@@ -1,30 +1,30 @@
 // file acts as a middleware
 
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 require("dotenv").config;
 
 module.exports = (req, res, next) => {
+  let token = "";
+  let authorizationToken = req.header("Authorization");
 
-    let token = ""
-    let authorizationToken = req.header("Authorization");
-    console.log(authorizationToken)
-    
-    if(authorizationToken){
-        authorizationToken = authorizationToken.replace("Bearer ", "");
-        console.log(authorizationToken);
-        token = authorizationToken
-    }
+  if (authorizationToken) {
+    authorizationToken = authorizationToken.replace("Bearer ", "");
 
-    if(!token){
-        return res.json({"message": "You cannot view this as it is hidden behind the wall of authentication."})
-    }
+    token = authorizationToken;
+  }
 
-    try{
-        const decodedToken = jwt.verify(token, process.env.SECRET);
-        req.user = decodedToken.user;
-        next();
-    }
-    catch(error){
-        return res.json({"message": "Your token is invalid."})
-    }
-}
+  if (!token) {
+    return res.json({
+      message:
+        "You cannot view this as it is hidden behind the wall of authentication.",
+    });
+  }
+
+  try {
+    const decodedToken = jwt.verify(token, process.env.SECRET);
+    req.user = decodedToken.user;
+    next();
+  } catch (error) {
+    return res.json({ message: "Your token is invalid." });
+  }
+};
