@@ -22,11 +22,11 @@ This app requires no installation when used in the browser.
 
 If running the app on a local installation, execute the following command in your local version of the backend repo followed by the command **nodemon server.js**:
 
-npm i axios bcrypt body-parser cjs cloudinary connect-flash cors dotenv ejs express ejs-express-layouts express-session jquery json-web-token method-override moment mongoose mongodb multer nodemon passport passport-local path stripe @stripe/react-stripe-js @stripe/stripe-js
+```npm i axios bcrypt body-parser cjs cloudinary connect-flash cors dotenv ejs express ejs-express-layouts express-session jquery json-web-token method-override moment mongoose mongodb multer nodemon passport passport-local path stripe @stripe/react-stripe-js @stripe/stripe-js```
 
 and the following command in your local version of the frontend repo followed by the command **npm start**:
 
-npm i axios bootstrap cloudinary font-awesome jet-decode multer react-bootstrap react-dom react-dotenv react-router-dom @stripe/react-stripe-js @stripe/stripe-js
+```npm i axios bootstrap cloudinary font-awesome jet-decode multer react-bootstrap react-dom react-dotenv react-router-dom @stripe/react-stripe-js @stripe/stripe-js```
 
 ## Timeframe & Working Team
 
