@@ -34,7 +34,7 @@ We were given a week to complete this project and split the project evenly betwe
 
 ## Technologies Used
 
-We built this app using React for our frontend and Node.js in Express for the backend of the app. We also used Cloudinary for image uploads, Mongo Atlas for database storage and retrieval, as well as implementing Axios calls for API functionality.
+We built this app using React for our frontend and Node.js in Express for the backend of the app. We also used Cloudinary for image uploads, Mongo Atlas for database storage and retrieval, as well as implementing Axios calls for API functionality. We deployed our app on Heroku.
 
 ## Brief
 
@@ -91,13 +91,13 @@ We had several ideas for this project and started by checking out the various fr
 
 #### ERD
 
-Having settled on the type of app we wanted to create, we started by drawing up an ERD to map out the relations between all of the models and functionalities we wanted to include. We wanted users to have an account, with the option to sign up as a seller when they initially register with the site. We also wanted to include a shopping cart that would store the items selected for purchase, as well as transaction handling and payment functionality.  
+Having settled on the type of app we wanted to create, we started by drawing up an ERD using Figma to map out the relations between all of the models and functionalities we wanted to include. We wanted users to have an account, with the option to sign up as a seller when they initially register with the site. We also wanted to include a shopping cart that would store the items selected for purchase, as well as transaction handling and payment functionality.  
 
 ![Screenshot 2022-11-10 at 15 06 20](https://user-images.githubusercontent.com/97313222/201130750-d91a83e7-148c-4c2f-929d-27cc305e85ec.png)
 
 #### Wireframes
 
-We then got to work on wireframing our site page by page.
+We then got to work on wireframing our site page by page, also using Figma.
 <p float="left">
 <img src="https://media.git.generalassemb.ly/user/44781/files/3a1e490b-9a8d-4785-a770-d008ef2a4954" height="400" width="500">
 <img src="https://media.git.generalassemb.ly/user/44781/files/509d85fb-e326-456a-917e-9e4073f6b1fd" height="400" width="500">
