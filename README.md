@@ -34,7 +34,7 @@ We were given a week to complete this project and split the project evenly betwe
 
 ## Technologies Used
 
-We built this app using React for our frontend and Node.js in Express for the backend of the app. We also used Cloudinary for image uploads, Mongo Atlas for database storage and retrieval, as well as implementing Axios calls for API functionality. We deployed our app on Heroku.
+We built this app using React for our frontend and Node.js in Express for the backend of the app. We also used Cloudinary for image uploads, Mongo Atlas for database storage and retrieval, as well as implementing Axios calls for API functionality and testing these with Postman. We deployed our app on Heroku.
 
 ## Brief
 
