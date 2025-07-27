@@ -6,9 +6,9 @@ This project was assigned in the final week of General Assembly’s 3-month SEI 
 
 ## Deployment link
 
-[You can find Agora deployed on this link](https://sei66project4agora.herokuapp.com/). Create an account to browse products or sign up as a seller to sell your own!
+[You can find Agora deployed on this link](https://agora-8009009f3244.herokuapp.com/). Create an account to browse products or sign up as a seller to sell your own!
 
-![Screenshot 2022-11-09 at 12 09 57](https://media.git.generalassemb.ly/user/44781/files/4c3fd2df-9523-439f-8bc3-cfdbc0a98de0)
+<img width="1766" height="1002" alt="Image" src="https://github.com/user-attachments/assets/aa79a96c-58b1-4049-9877-73903f6304ac" />
 
 ## Getting Started/Code Installation
 
@@ -77,7 +77,7 @@ Our development flow was as follows:
 
 We found that Trello worked brilliantly for compiling and managing tasks in the past, and so decided to create another Trello board so we could track and manage the development of our app. We split tasks depending on whether they related to the frontend and backend, and further separated these by feature, such as Cart or Transaction, so that we were all working on separate features, contributing equally to the project.
 
-![Screenshot 2022-11-07 at 16 47 48](https://user-images.githubusercontent.com/97313222/200367067-66f14a67-e398-401e-a75d-9ad835e584e4.png)
+<img width="1658" height="868" alt="Image" src="https://github.com/user-attachments/assets/27a34108-f726-4735-bd77-80f74cb39d22" />
 
 ## Build/Code Process
 
@@ -93,16 +93,16 @@ We had several ideas for this project and started by checking out the various fr
 
 Having settled on the type of app we wanted to create, we started by drawing up an ERD using Figma to map out the relations between all of the models and functionalities we wanted to include. We wanted users to have an account, with the option to sign up as a seller when they initially register with the site. We also wanted to include a shopping cart that would store the items selected for purchase, as well as transaction handling and payment functionality.  
 
-![Screenshot 2022-11-10 at 15 06 20](https://user-images.githubusercontent.com/97313222/201130750-d91a83e7-148c-4c2f-929d-27cc305e85ec.png)
+<img width="705" height="622" alt="Image" src="https://github.com/user-attachments/assets/9bc46737-eef3-43ab-b9b7-325b5b090752" />
 
 #### Wireframes
 
 We then got to work on wireframing our site page by page, also using Figma.
 <p float="left">
-<img src="https://media.git.generalassemb.ly/user/44781/files/3a1e490b-9a8d-4785-a770-d008ef2a4954" height="400" width="500">
-<img src="https://media.git.generalassemb.ly/user/44781/files/509d85fb-e326-456a-917e-9e4073f6b1fd" height="400" width="500">
-<img src="https://media.git.generalassemb.ly/user/44781/files/8c6b3e84-07a9-4a9b-a7e6-8dab2366c51d" height="400" width="500">
-<img src="https://media.git.generalassemb.ly/user/44781/files/cdb053a4-6ae3-4bce-9759-9e110384b87a" height="400" width="500">
+<img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/3cb08202-3b07-402f-b4c6-4e3815cf2395" />
+<img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/8d2cbed0-2e46-42c9-92ae-903d5a2b90f0" />
+<img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/2a73b9f4-525c-4d4a-bcbc-a42fc2868bd9" />
+<img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/f265885e-06ed-4993-8e81-f1cc241c97d5" />
 </p>
 
 #### User Stories
@@ -138,43 +138,43 @@ Using Trello meant we had a good overview of the tasks we needed to accomplish a
 
 My teammate and I started work on the backend of the project by building the models we would use to create, update and structure data in our database. We have 7 models, of which I wrote 4 (Cart, Product, Review, Favourite) and my teammate wrote the other 3 (Seller, User, Transaction):
 
-![Screenshot 2022-11-10 at 15 35 00](https://media.git.generalassemb.ly/user/44781/files/838eabb9-62a8-4d6c-a116-dfd21ca3900c)
-![Screenshot 2022-11-10 at 15 36 07](https://media.git.generalassemb.ly/user/44781/files/b46985a7-9df3-4e55-ba71-4a074f801a2c)
-![Screenshot 2022-11-10 at 15 36 26](https://media.git.generalassemb.ly/user/44781/files/95e984ff-5e11-433c-8c6c-7e860d1d18aa)
+<img width="404" height="544" alt="Image" src="https://github.com/user-attachments/assets/2b79e30e-ea12-4497-b8be-ed33f0bb7c71" />
+<img width="445" height="649" alt="Image" src="https://github.com/user-attachments/assets/91c96b34-26fd-4073-8874-401ae94b29e1" />
+<img width="508" height="253" alt="Image" src="https://github.com/user-attachments/assets/7f17ef34-caeb-41ba-964b-f46b73c9a93b" />
 
 We knew that our models would need to reference other models, e.g. I made the Cart model reference the User and Product models in order to later identify and populate details for products along with the information for the user purchasing them, so using our ERD, we made sure models were referencing each other correctly.
 
 Next, we began working on our controllers and routes. We needed controllers and routes for: authorisation; users; cart; index; products; reviews; search. I agreed to write the controllers for cart, index, products and review. I started with **index.js**:
 
-![Screenshot 2022-11-10 at 16 25 35](https://media.git.generalassemb.ly/user/44781/files/d162e4c2-5495-48fd-8cc9-c3d401f89177)
+<img width="315" height="75" alt="Image" src="https://github.com/user-attachments/assets/9cc45590-cf36-4b1a-91fa-309165d1237b" />
 
 This simply renders the index page and requires no additional code for a response. I then started working on **products.js**:
 
-![Screenshot 2022-11-10 at 16 16 54](https://media.git.generalassemb.ly/user/44781/files/2201354c-286f-4255-a9a8-79e729cfe8ba)
+<img width="505" height="753" alt="Image" src="https://github.com/user-attachments/assets/f6a27c1f-8701-4577-8c3d-98b324bc4f60" />
 
 As an example, the **product_create_post** is called when the seller chooses to add a product on the frontend. The form captures all of the necessary details and submits this to the backend as a request. A new product is created according to the Product schema, then the ID of the seller - which is included in the request - is added into the product information before the product is then saved. The ID of the new product is then added to that unique seller in our database and the updated seller information is then saved. Once this is complete, the information about the new product is passed back to the frontend as a response in JSON format.
 
 We made sure that our APIs were sending JSON responses to make them RESTful, and included this in our routes by inserting **router.use(express.json());**
 
-![Screenshot 2022-11-10 at 16 31 32](https://media.git.generalassemb.ly/user/44781/files/8696ee01-c7fe-4bb8-8645-e6a71709b6ee)
+<img width="541" height="364" alt="Image" src="https://github.com/user-attachments/assets/32849061-dd1a-42bb-82ba-2d180f32f4da" />
 
 Before making Axios API calls on the frontend, I tested all of my APIs to ensure they were sending JSON with the right information. For more on testing, see **Stage 6: Testing** below.
 
 Once we were sure the APIs we had written were sending the correct responses, our teammates were able to start using these in the components they had begun writing on the frontend. For example, the main list of all products is called on our top level component **App.js**:
 
-![Screenshot 2022-11-10 at 16 40 58](https://media.git.generalassemb.ly/user/44781/files/bc0992be-0dbb-4e41-9355-949f1b440417)
+<img width="383" height="161" alt="Image" src="https://github.com/user-attachments/assets/d6cf5e5d-a18f-4866-8e8a-e569b7701898" />
 
 This **loadProductList()** function makes an API call that sends a request to the backend, which in turn provides a JSON response containing the information for all of the products in our database. This updates the **useState() hook** to then display all of the products to the user in the **ProductList** component:
 
-![Screenshot 2022-11-10 at 16 50 02](https://media.git.generalassemb.ly/user/44781/files/4a7e5701-7378-4857-a5c7-fd86fae6b83d)
+<img width="623" height="630" alt="Image" src="https://github.com/user-attachments/assets/8db547e1-3d78-4220-8b92-14657afd6f0d" />
 
 Additionally, this is also passed down as a prop to several other components where it can then be filtered and mapped, as in the **MyProductList** component:
 
-![Screenshot 2022-11-10 at 16 52 53](https://media.git.generalassemb.ly/user/44781/files/ad6551b1-99f3-4d50-9968-ba26ffb47b69)
+<img width="589" height="498" alt="Image" src="https://github.com/user-attachments/assets/1a581a8b-7700-4289-a93c-3d8a13c30f6f" />
 
 Here you can also see an example of how we have used React hooks to set state. We have a form that allows a seller to add a product. The state of **showAddProductForm** is initially set to _false_. The product create form is located in a ternary statement, and since the starting condition requires **showAddProductForm** to be true in order to display the form, the form is initially hidden from the seller:
 
-![Screenshot 2022-11-10 at 16 55 40](https://media.git.generalassemb.ly/user/44781/files/a9424f0b-9c79-4843-8c28-0ce76026c6dd)
+<img width="760" height="828" alt="Image" src="https://github.com/user-attachments/assets/0e071ee0-035b-45a9-ab5b-6bd729fe07f4" />
 
 Once the seller clicks on the 'Add a product' button, this state is updated to _true_ and the form is then displayed to the seller. Once the seller has entered the appropriate product information and clicked submit, the product information is sent as a request to the backend and the state is again set to _false_, which hides the form.
 
@@ -184,30 +184,30 @@ Once the seller clicks on the 'Add a product' button, this state is updated to _
 
 My favourite function has to be the API I wrote for our shopping cart. The API receives the request from the frontend with the user's ID as a query parameter:
 
-![Screenshot 2022-11-10 at 17 16 08](https://media.git.generalassemb.ly/user/44781/files/63c26b90-95e1-4350-8fff-407e051b3e78)
+<img width="635" height="738" alt="Image" src="https://github.com/user-attachments/assets/d7559030-3d44-4230-9209-cdf69fa1dd2f" />
 
 It checks the database to see if a user exists with this ID: if not, it returns an error, otherwise the function continues. Next, it takes the product ID - also passed into the request as a query parameter - to check if a product exists with this ID. It then checks to see if a shopping cart exists in the database for the user; if so, it checks to see if the product is already in the cart. If there is an index that matches the product ID, the quantity of the product is increased by 1, if there is no index found with this ID, the product is not in the cart, so the entire product object is then added to the cart with the **cart.products.push** method. The cart is then saved, and the updated cart object is sent as a JSON response to the frontend.
 
 The **else** part of this function ensures that if no cart exists for this user, a new instance of cart is created, and populated with the user ID and the products selected for purchase. The cart object is then sent as a JSON response to the frontend.
 
-![Screenshot 2022-11-14 at 16 39 10](https://media.git.generalassemb.ly/user/44781/files/4fcf3522-41f8-4980-b71d-a1566f761d4c)
+<img width="1029" height="407" alt="Image" src="https://github.com/user-attachments/assets/37dc4e09-e47d-4ceb-9dcc-a4fbcd678190" />
 
 #### Search API
 
 My other top favourite function is our search API. On the frontend we have the functional components **Search.js** and **SearchResults.js**:
 <p float="left">
-<img src="https://media.git.generalassemb.ly/user/44781/files/0720141a-d1c3-42a3-80ef-594520182bbb" height="650" width="370">
-<img src="https://media.git.generalassemb.ly/user/44781/files/929c0f2d-540c-4bab-a2ac-53f6c7970752" height="650" width="630">
+<img width="370" height="650" alt="Image" src="https://github.com/user-attachments/assets/b92de0e2-f7f5-47ea-9efc-e64405b8dd23" />
+<img width="630" height="650" alt="Image" src="https://github.com/user-attachments/assets/b8016507-98e5-416f-a1c4-f546893a8a41" />
 </p>
 
 **Search.js** is the component that represents the search bar visible to the user. Here, the **search** variable is used to set the state to an empty string. The user can then enter a query - or none - into the search bar and their query, captured as the value entered into the search bar, is used to set state and then send a request to the search API. If no text is entered and the user presses Enter, the value "all" is sent in the request:
 
-![Screenshot 2022-11-10 at 19 02 52](https://media.git.generalassemb.ly/user/44781/files/250bf572-5b2c-4724-a22b-f74614679de1)
+<img width="1140" height="667" alt="Image" src="https://github.com/user-attachments/assets/5f1fa8ff-22d3-44cc-8ce3-a06b8ce1855e" />
 
 On the backend, the API handles the request by setting a const variable **q** equal to the value of the query, i.e. the text value sent by the frontend. If the user entered no text and simply hit enter, this value will be "all", so the API finds all products in the database, populates the seller key - which references the Seller model - and returns all products to the frontend as a JSON object. If the user has clicked on one of the Categories buttons on the homepage, this also sends a request to the search API with the value of the category selected. The database is then searched for products that match the category and are returned to the frontend in JSON format. If the user has entered text, this text value is used to search for all products with a **title** value matching the search request, and then sent to the frontend in JSON format to display for the user.
 
-![empty-search](https://media.git.generalassemb.ly/user/44781/files/87160127-78c0-4b96-a38f-1edb40dbf249)
-![search](https://media.git.generalassemb.ly/user/44781/files/0214a248-0a60-4ee0-8403-86bfb9f5e069)
+![Image](https://github.com/user-attachments/assets/1b9353c5-1ea7-49fb-91ce-e207c4a962dd)
+![Image](https://github.com/user-attachments/assets/048a24aa-ea32-4bdb-ba9a-4e1471a33f92)
 
 ### Stage 6: Testing  
 
@@ -215,7 +215,7 @@ Testing functions along the way is how we managed to stay on track for delivery 
 
 When building the backend APIs, I first wrote the structure of my APIs and then used Postman to test whether they were generating the right response:
 
-![Screenshot 2022-11-09 at 12 52 20](https://media.git.generalassemb.ly/user/44781/files/6225c86f-689b-478b-a2df-da73ff8d5596)
+<img width="1917" height="890" alt="Image" src="https://github.com/user-attachments/assets/f2144ecc-4130-421f-97c4-c6db2ea9ca48" />
 
 Our APIs are RESTful, meaning that instead of rendering a page, they pass a JSON object to the frontend, where this is mapped and/or filtered to display individual pieces of information such as the user ID, or product title. Having used Postman together with console.logs on the backend, I was able to pinpoint any issues in sending the correct information via our API calls.
 
@@ -223,18 +223,19 @@ Our APIs are RESTful, meaning that instead of rendering a page, they pass a JSON
 
 The style of our site is inspired by comparable marketplace sites like Amazon, eBay, Etsy, etc. We display our products on the main page as "cards" that users can click on to see individual product details. We opted for a white/blue/black theme to keep the site clean, simple and bright to appeal to users:
 
-![Screenshot 2022-11-14 at 18 09 00](https://media.git.generalassemb.ly/user/44781/files/acd71bcc-870c-4181-a3b8-1dfe70b9ff2f)
+<img width="1292" height="876" alt="Image" src="https://github.com/user-attachments/assets/b381577e-709a-4320-a32b-b2ed6c434a9d" />
 
 The product carousel on our home page is external code and separates the products into individual divs that can be adjusted and slid left or right via arrow buttons:
 
-![Screenshot 2022-11-14 at 18 13 52](https://media.git.generalassemb.ly/user/44781/files/4eea7686-2cac-404e-90fc-aee4fa54eff0)
-![carousel (1)](https://user-images.githubusercontent.com/97313222/201743314-6cd26b9d-d50e-4bce-b9a1-edd95b76e9f8.gif)
+<img width="473" height="674" alt="Image" src="https://github.com/user-attachments/assets/28393435-f232-4cfd-9550-d98bf8a9c305" />
+
+![Image](https://github.com/user-attachments/assets/7f574090-47a0-4f67-ada7-0d8241d09ac4)
 
 Here you can see the code for our search bar. It's a simple div that contains a form field with several elements, including a button and a text input field. Each of these is styled and nested within the parent container:
 
 <p float="left">
-<img src="https://media.git.generalassemb.ly/user/44781/files/dfacceae-1a55-44c6-9901-0f27796fc05f" height="550" width="625">
-<img src="https://media.git.generalassemb.ly/user/44781/files/4ad6e2b2-8758-426f-b097-7b02aa86ca7a" height="550" width="375">
+<img width="625" height="550" alt="Image" src="https://github.com/user-attachments/assets/31c1c729-0869-492e-a424-4d25c8d262b7" />
+<img width="375" height="550" alt="Image" src="https://github.com/user-attachments/assets/7d001eb3-fe34-4c85-8b2d-1c8e73f290b8" />
 </p>
 
 ### Stage 8: Bonus features  
@@ -247,7 +248,7 @@ On the frontend, we learned over the course of the project that the scope of our
 
 We knew that our project was ambitious for a capstone project - producing a fully functional marketplace app requires a lot of components on the frontend and backend - and one of the most challenging was the cart. We had to be able to create a cart, add items to it, be able to remove them and update the cart each time. This required a two-part schema, which proved a little tricky to work with. This also meant we had to revise our initial Cart Schema to accommodate an individual Item schema. The API to remove an item was initially removing only the last item in the cart, but by comparing it to the add item functionality and essentially reverse engineering that, we were able to get the functionality we wanted:
 
-<img src="https://media.git.generalassemb.ly/user/44781/files/cc1cac3b-beb9-4da5-a798-476b5e1f714a" height="500" width="600">
+<img width="660" height="500" alt="Image" src="https://github.com/user-attachments/assets/2a2ffbc4-df5b-4e99-9164-0165168d5ee2" />
 
 Using Stripe for our transaction processing was also a big undertaking; in hindsight, we needed to have given this a bit more time to implement. My teammate worked very hard on getting this element up and running, and I'm happy to say that this functionality works well.
 
